@@ -56,8 +56,11 @@ public class InteractableGlue : VRTK.VRTK_InteractableObject {
 				//don't think we need this in here since we aren't connecting anything, just gluing
 				//gameObject.transform.SetParent (target.gameObject.transform); //THIS IS GLUE: The magnet now moves with the fan chain
 				
+				
 				//whatever animation we decide for glue particles
-				fanObj.GetComponentInChildren<Animation>().Play("Take 001");
+
+
+				//fanObj.GetComponentInChildren<Animation>().Play("Take 001");
 			}
 			else{
 				apObj.GetComponent<Wood>().makeSticky(); 
