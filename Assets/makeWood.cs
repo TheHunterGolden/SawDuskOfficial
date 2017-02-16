@@ -6,7 +6,7 @@ using VRTK;
 public class makeWood : MonoBehaviour{
 
 			public GameObject leftController;
-			public GameObject RightController;
+			public GameObject rightController;
 			public GameObject toClone;
 			public Transform dispenseLocation;
 			Animator animator;
@@ -21,8 +21,8 @@ public class makeWood : MonoBehaviour{
 	private void update(){
 		GameObject leftTouched;
 		GameObject rightTouched;
-		leftTouched = leftController.GetComponent<VRTK_InteractTouch>.GetTouchedObject ();
-		rightTouched = rightController.GetComponent<VRTK_InteractTouch>.GetTouchedObject ();
+		leftTouched = leftController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
+		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
 		if (leftTouched || rightTouched == gameObject) {
 			handlePush();
 		}
