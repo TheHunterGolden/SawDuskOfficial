@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 //check inspector 
-public class InteractableGlue : VRTK.VRTK_InteractableObject {
+public class InteractableGlue : VRTK_InteractableObject {
 
 	public GameObject chainObj;
 	public GameObject chainLink;
