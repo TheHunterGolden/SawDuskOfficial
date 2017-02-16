@@ -13,8 +13,9 @@ public class makeWood : MonoBehaviour{
 
 			private void Start()
 	{			animator = GetComponent<Animator> ();
+		animator.enabled = true;
 				animator.SetBool("isClicked", false);
-				animator.enabled = true;
+				
 				
 			}
 		
@@ -23,6 +24,7 @@ public class makeWood : MonoBehaviour{
 		GameObject rightTouched;
 		leftTouched = leftController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
 		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
+		Debug.Log ("touched");
 		if (leftTouched || rightTouched == gameObject) {
 			handlePush();
 		}
