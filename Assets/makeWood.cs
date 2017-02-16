@@ -20,7 +20,7 @@ public class makeWood : VRTK_InteractableObject {
 	{
 		base.StartUsing(usingObject);
 		animator.SetBool ("isClicked", true);
-		dropWood ();
+		dropWood();
 		animator.SetBool("isClicked", false);
 	}
 
