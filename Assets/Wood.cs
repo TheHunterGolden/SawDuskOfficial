@@ -5,7 +5,7 @@ using UnityEngine;
 public class Wood : MonoBehaviour {
 
 	// Use this for initialization
-	public GameObject chainLink;
+
 	public bool isSticky;
 	void Start () {
 		isSticky = false;
@@ -27,7 +27,7 @@ public class Wood : MonoBehaviour {
 	void AttachWood (Collision target) { 
 		if (target.gameObject.tag.Equals ("wood") == true) { 
 	    //if this wood is sticky or the other wood object is sticky, connect
-			if (chainLink.GetComponent<Wood>().isSticky || this.isSticky){ 
+			if (target.gameObject.GetComponent<Wood>().isSticky || this.isSticky){ 
 				
 				gameObject.transform.SetParent (target.gameObject.transform); //sticks both wood objects together
 				
