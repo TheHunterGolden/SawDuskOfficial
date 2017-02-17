@@ -3,31 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class makeWood : VRTK_InteractableObject {
+public class makeWood : MonoBehaviour{
 
-	Animator animator;
+			public GameObject leftController;
+			public GameObject rightController;
+			public GameObject toClone;
+			public Transform dispenseLocation;
+			Animator animator;
+		public bool woodDispensed;
+		
 
-	public GameObject wood;
+			private void Start()
+	{			
+		woodDispensed = false;
 
-	// Use this for initialization
-
-	void Start () {
 		animator = GetComponent<Animator> ();
 		animator.enabled = true;
+				//animator.SetBool("isClicked", false);
+				
+				
+			}
+		
+	public void Update(){
+		GameObject leftTouched;
+		GameObject rightTouched;
+		leftTouched = leftController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
+		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
+		Debug.Log ("touched");
+		if (leftTouched || rightTouched == gameObject) {
+			Debug.Log ("L or R touching");
+			handlePush ();
+		} else {
+			woodDispensed = false;
+		}
 	}
 
-	public override void StartUsing(GameObject usingObject)
-	{
-		base.StartUsing(usingObject);
-		animator.SetBool ("isClicked", true);
-		dropWood ();
-		animator.SetBool("isClicked", false);
-	}
-
-	public void dropWood(){
-		Instantiate (wood, new Vector3(0, 4, 8), Quaternion.identity);
-	}
+	public void handlePush()
+			{
+				
+				Debug.Log("Pushed");
+		if (woodDispensed == false){ 
+				//animator.SetBool ("isClicked", true);
+				GameObject newGo = (GameObject)Instantiate(toClone, dispenseLocation.position, Quaternion.identity);
+		woodDispensed = true;
+				//animator.SetBool ("isClicked", false);
+		}
+				
+			}
+		
+		}
 	
 
 
-}
+
