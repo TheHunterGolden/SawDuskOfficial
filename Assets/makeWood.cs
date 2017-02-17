@@ -11,7 +11,7 @@ public class makeWood : MonoBehaviour{
 			public Transform dispenseLocation;
 			Animator animator;
 		public bool woodDispensed;
-		public bool buttonTouched;
+		
 
 			private void Start()
 	{			
@@ -19,7 +19,7 @@ public class makeWood : MonoBehaviour{
 
 		animator = GetComponent<Animator> ();
 		animator.enabled = true;
-				animator.SetBool("isClicked", false);
+				//animator.SetBool("isClicked", false);
 				
 				
 			}
@@ -31,6 +31,7 @@ public class makeWood : MonoBehaviour{
 		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
 		Debug.Log ("touched");
 		if (leftTouched || rightTouched == gameObject) {
+			Debug.Log ("L or R touching");
 			handlePush ();
 		} else {
 			woodDispensed = false;
@@ -42,10 +43,10 @@ public class makeWood : MonoBehaviour{
 				
 				Debug.Log("Pushed");
 		if (woodDispensed == false){ 
-				animator.SetBool ("isClicked", true);
+				//animator.SetBool ("isClicked", true);
 				GameObject newGo = (GameObject)Instantiate(toClone, dispenseLocation.position, Quaternion.identity);
 		woodDispensed = true;
-				animator.SetBool ("isClicked", false);
+				//animator.SetBool ("isClicked", false);
 		}
 				
 			}
