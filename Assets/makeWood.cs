@@ -10,9 +10,14 @@ public class makeWood : MonoBehaviour{
 			public GameObject toClone;
 			public Transform dispenseLocation;
 			Animator animator;
+		public bool woodDispensed;
+		public bool buttonTouched;
 
 			private void Start()
-	{			animator = GetComponent<Animator> ();
+	{			
+		woodDispensed = false;
+
+		animator = GetComponent<Animator> ();
 		animator.enabled = true;
 				animator.SetBool("isClicked", false);
 				
@@ -26,19 +31,25 @@ public class makeWood : MonoBehaviour{
 		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
 		Debug.Log ("touched");
 		if (leftTouched || rightTouched == gameObject) {
-			handlePush();
+			handlePush ();
+		} else {
+			woodDispensed = false;
 		}
 	}
 
-		 IEnumerator handlePush()
+	public void handlePush()
 			{
 				
 				Debug.Log("Pushed");
+		if (woodDispensed == false){ 
 				animator.SetBool ("isClicked", true);
 				GameObject newGo = (GameObject)Instantiate(toClone, dispenseLocation.position, Quaternion.identity);
+		woodDispensed = true;
 				animator.SetBool ("isClicked", false);
-				yield return new WaitForSeconds (1);
+		}
+				
 			}
+		
 		}
 	
 
