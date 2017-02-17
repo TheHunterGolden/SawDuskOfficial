@@ -19,7 +19,7 @@ public class makeWood : MonoBehaviour{
 				
 			}
 		
-	private void update(){
+	public void Update(){
 		GameObject leftTouched;
 		GameObject rightTouched;
 		leftTouched = leftController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
@@ -30,13 +30,14 @@ public class makeWood : MonoBehaviour{
 		}
 	}
 
-			private void handlePush()
+		 IEnumerator handlePush()
 			{
 				
 				Debug.Log("Pushed");
 				animator.SetBool ("isClicked", true);
 				GameObject newGo = (GameObject)Instantiate(toClone, dispenseLocation.position, Quaternion.identity);
 				animator.SetBool ("isClicked", false);
+				yield return new WaitForSeconds (1);
 			}
 		}
 	
