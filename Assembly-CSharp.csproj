@@ -329,6 +329,7 @@
      <Compile Include="Assets\VRTK\Scripts\Utilities\VRTK_SharedMethods.cs" />
      <Compile Include="Assets\VRTK\Scripts\Utilities\VRTK_Simulator.cs" />
      <Compile Include="Assets\Wood.cs" />
+     <Compile Include="Assets\gameController.cs" />
      <Compile Include="Assets\makeWood.cs" />
      <None Include="Assets\VRTK\Version.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
@@ -348,9 +349,6 @@
      <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
      <None Include="Assets\Axes_and_Hammers\Readme.txt" />
      <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -365,9 +363,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
