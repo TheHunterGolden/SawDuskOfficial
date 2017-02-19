@@ -26,7 +26,7 @@ public class gameController : MonoBehaviour {
 		woodDispensed2 = false;
 		woodDispensed3 = false;
 		woodDispensed4 = false;
-		dispenseLocation = new Vector3 (3, 10, -8);
+		dispenseLocation = new Vector3 (3, 6, -8);
 
 	}
 
@@ -48,7 +48,7 @@ public class gameController : MonoBehaviour {
 	
 		if (leftTouched || rightTouched == buttonSmallWood) {
 			if (woodDispensed2 == false) { 
-				Instantiate (wood, dispenseLocation, Quaternion.identity);
+				Instantiate (smallWood, dispenseLocation, Quaternion.identity);
 				woodDispensed2 = true;
 			} 
 		}else {
@@ -56,7 +56,7 @@ public class gameController : MonoBehaviour {
 		}
 		if (leftTouched || rightTouched == buttonMediumWood) {
 			if (woodDispensed3 == false) { 
-				Instantiate (wood, dispenseLocation, Quaternion.identity);
+				Instantiate (mediumWood, dispenseLocation, Quaternion.identity);
 				woodDispensed3 = true;
 			} 
 		}else {
@@ -64,7 +64,7 @@ public class gameController : MonoBehaviour {
 		}
 		if (leftTouched || rightTouched == buttonLargeWood) {
 			if (woodDispensed4 == false) { 
-				Instantiate (wood, dispenseLocation, Quaternion.identity);
+				Instantiate (largeWood, dispenseLocation, Quaternion.identity);
 				woodDispensed4 = true;
 			} 
 		}else {
