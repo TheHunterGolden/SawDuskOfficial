@@ -41,7 +41,7 @@ public class gameController : MonoBehaviour {
 		Debug.Log ("touched");
 		if (leftTouched || rightTouched == buttonWood) {
 			if (woodDispensed1 == false) { 
-				Instantiate (wood, dispenseLocation, Quaternion.Euler(rotation));
+				Instantiate (mediumWood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed1 = true;
 			} 
 		} else {
@@ -58,7 +58,7 @@ public class gameController : MonoBehaviour {
 		}
 		if (leftTouched || rightTouched == buttonMediumWood) {
 			if (woodDispensed3 == false) { 
-				Instantiate (mediumWood, dispenseLocation, Quaternion.Euler(rotation));
+				Instantiate (wood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed3 = true;
 			} 
 		}else {
