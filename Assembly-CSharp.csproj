@@ -330,7 +330,6 @@
      <Compile Include="Assets\VRTK\Scripts\Utilities\VRTK_Simulator.cs" />
      <Compile Include="Assets\Wood.cs" />
      <Compile Include="Assets\gameController.cs" />
-     <Compile Include="Assets\makeWood.cs" />
      <None Include="Assets\VRTK\Version.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
