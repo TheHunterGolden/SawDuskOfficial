@@ -26,7 +26,7 @@ public class gameController : MonoBehaviour {
 		woodDispensed2 = false;
 		woodDispensed3 = false;
 		woodDispensed4 = false;
-		dispenseLocation = new Vector3 (3, 6, -8);
+		dispenseLocation = new Vector3 (-1.34f, 5.355f, -10.962f);
 
 	}
 
