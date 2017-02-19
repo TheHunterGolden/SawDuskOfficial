@@ -19,6 +19,7 @@ public class gameController : MonoBehaviour {
 	public GameObject buttonSmallWood;
 	public GameObject buttonMediumWood;
 	public GameObject buttonLargeWood;
+	public Vector3 rotation;
 
 	private void Start()
 	{			
@@ -27,6 +28,7 @@ public class gameController : MonoBehaviour {
 		woodDispensed3 = false;
 		woodDispensed4 = false;
 		dispenseLocation = new Vector3 (-1.34f, 5.355f, -10.962f);
+		rotation = new Vector3 (0, -90, 0);
 
 	}
 
@@ -39,7 +41,7 @@ public class gameController : MonoBehaviour {
 		Debug.Log ("touched");
 		if (leftTouched || rightTouched == buttonWood) {
 			if (woodDispensed1 == false) { 
-				Instantiate (wood, dispenseLocation, Quaternion.identity);
+				Instantiate (wood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed1 = true;
 			} 
 		} else {
@@ -48,7 +50,7 @@ public class gameController : MonoBehaviour {
 	
 		if (leftTouched || rightTouched == buttonSmallWood) {
 			if (woodDispensed2 == false) { 
-				Instantiate (smallWood, dispenseLocation, Quaternion.identity);
+				Instantiate (smallWood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed2 = true;
 			} 
 		}else {
@@ -56,7 +58,7 @@ public class gameController : MonoBehaviour {
 		}
 		if (leftTouched || rightTouched == buttonMediumWood) {
 			if (woodDispensed3 == false) { 
-				Instantiate (mediumWood, dispenseLocation, Quaternion.identity);
+				Instantiate (mediumWood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed3 = true;
 			} 
 		}else {
@@ -64,7 +66,7 @@ public class gameController : MonoBehaviour {
 		}
 		if (leftTouched || rightTouched == buttonLargeWood) {
 			if (woodDispensed4 == false) { 
-				Instantiate (largeWood, dispenseLocation, Quaternion.identity);
+				Instantiate (largeWood, dispenseLocation, Quaternion.Euler(rotation));
 				woodDispensed4 = true;
 			} 
 		}else {
