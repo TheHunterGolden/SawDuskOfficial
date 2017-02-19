@@ -8,7 +8,7 @@
       <File FileName="Assets\VRTK\Examples\Resources\Scripts\ButtonReactor.cs" Line="1" Column="1" />
       <File FileName="Assets\VRTK\Scripts\Interactions\VRTK_InteractTouch.cs" Line="1" Column="1" />
       <File FileName="Assets\Glue.cs" Line="1" Column="1" />
-      <File FileName="Assets\gameController.cs" Line="29" Column="59" />
+      <File FileName="Assets\gameController.cs" Line="69" Column="73" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
