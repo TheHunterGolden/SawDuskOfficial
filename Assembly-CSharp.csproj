@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Audio\buttonArray.cs" />
      <Compile Include="Assets\Glue.cs" />
      <Compile Include="Assets\InteractableGlue.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
