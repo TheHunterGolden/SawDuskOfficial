@@ -21,10 +21,7 @@ public class Wood : MonoBehaviour {
 		//Debug.Log("is this happening?");
 	}
 	//calls to make wood sticky or not sticky (might need to set a timer to see how long things are sticky)
-	public void setSticky(){
-		isSticky = !isSticky;
-		//Debug.Log("or is this happening?");
-	}
+	
 
 	void OnCollisionEnter (Collision target) { 
 		if (target.gameObject.tag.Equals ("wood") == true) { 
@@ -33,9 +30,17 @@ public class Wood : MonoBehaviour {
 				Debug.Log("stuck");
 				//target.gameObject.transform.SetParent(empty.transform); //sticks both wood objects together
 				//gameObject.transform.SetParent(empty.transform);
+				ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
+				joint.angularXMotion = ConfigurableJointMotion.Locked;
+				joint.angularYMotion = ConfigurableJointMotion.Locked;
+				joint.angularZMotion = ConfigurableJointMotion.Locked;
+				joint.xMotion = ConfigurableJointMotion.Locked;
+				joint.yMotion = ConfigurableJointMotion.Locked;
+				joint.zMotion = ConfigurableJointMotion.Locked;
+				joint.projectionMode =JointProjectionMode.PositionAndRotation;
 
-				gameObject.AddComponent<FixedJoint>().connectedBody = target.gameObject.GetComponent<Rigidbody>();
-				setSticky();
+				joint.connectedBody = target.gameObject.GetComponent<Rigidbody>();
+				makeSticky();
 				//chainLink.GetComponentInChildren<Animation>().Play("Take 001"); //turns on the fan animation
 
 			}

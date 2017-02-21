@@ -1,9 +1,9 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{53433EC0-1278-2D15-43BF-7F6201678507}") = "SawDuskOfficial", "Assembly-CSharp.csproj", "{7E78D3D4-A451-816A-DA54-4D36DEF69308}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SawDuskOfficial", "Assembly-CSharp.csproj", "{7E78D3D4-A451-816A-DA54-4D36DEF69308}"
 EndProject
-Project("{53433EC0-1278-2D15-43BF-7F6201678507}") = "SawDuskOfficial", "Assembly-CSharp-Editor.csproj", "{5B85A274-9A9B-2917-76BF-66E206171506}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SawDuskOfficial", "Assembly-CSharp-Editor.csproj", "{5B85A274-9A9B-2917-76BF-66E206171506}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
