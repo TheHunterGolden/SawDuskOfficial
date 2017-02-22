@@ -28,7 +28,7 @@ public class Wood : MonoBehaviour {
 			//if this wood is sticky or the other wood object is sticky, connect
 			if (target.gameObject.GetComponent<Wood>().isSticky || this.isSticky){
 				Debug.Log("stuck");
-				target.gameObject.transform.SetParent(empty.transform); //sticks both wood objects together
+				target.gameObject.transform.SetParent(gameObject.transform); //sticks both wood objects together
 				//gameObject.transform.SetParent(empty.transform);
 				Destroy(target.gameObject.GetComponent<Rigidbody>());
 				/*ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
