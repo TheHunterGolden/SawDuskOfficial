@@ -28,9 +28,10 @@ public class Wood : MonoBehaviour {
 			//if this wood is sticky or the other wood object is sticky, connect
 			if (target.gameObject.GetComponent<Wood>().isSticky || this.isSticky){
 				Debug.Log("stuck");
-				//target.gameObject.transform.SetParent(empty.transform); //sticks both wood objects together
+				target.gameObject.transform.SetParent(empty.transform); //sticks both wood objects together
 				//gameObject.transform.SetParent(empty.transform);
-				ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
+				Destroy(target.gameObject.GetComponent<Rigidbody>());
+				/*ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
 				joint.angularXMotion = ConfigurableJointMotion.Locked;
 				joint.angularYMotion = ConfigurableJointMotion.Locked;
 				joint.angularZMotion = ConfigurableJointMotion.Locked;
@@ -40,6 +41,7 @@ public class Wood : MonoBehaviour {
 				joint.projectionMode =JointProjectionMode.PositionAndRotation;
 
 				joint.connectedBody = target.gameObject.GetComponent<Rigidbody>();
+				*/
 				makeSticky();
 				//chainLink.GetComponentInChildren<Animation>().Play("Take 001"); //turns on the fan animation
 
