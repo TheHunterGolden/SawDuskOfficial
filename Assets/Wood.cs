@@ -30,7 +30,10 @@ public class Wood : MonoBehaviour {
 				Debug.Log("stuck");
 				target.gameObject.transform.SetParent(gameObject.transform); //sticks both wood objects together
 				//gameObject.transform.SetParent(empty.transform);
+				gameObject.transform.SetParent(empty.transform);
+
 				Destroy(target.gameObject.GetComponent<Rigidbody>());
+				Destroy(gameObject.GetComponent<Rigidbody>());
 				/*ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
 				joint.angularXMotion = ConfigurableJointMotion.Locked;
 				joint.angularYMotion = ConfigurableJointMotion.Locked;
