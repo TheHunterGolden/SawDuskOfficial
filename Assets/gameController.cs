@@ -38,7 +38,7 @@ public class gameController : MonoBehaviour {
 		GameObject rightTouched;
 		leftTouched = leftController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
 		rightTouched = rightController.GetComponent<VRTK_InteractTouch> ().GetTouchedObject ();
-		Debug.Log (rightTouched);
+		Debug.Log ("touched");
 		if (leftTouched || rightTouched == buttonWood) {
 			if (woodDispensed1 == false) { 
 				Instantiate (mediumWood, dispenseLocation, Quaternion.Euler(rotation));
